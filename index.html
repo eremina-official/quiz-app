@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz historyczny</title>
+  <meta name="description" content="Quiz historyczny">
+  <link rel="stylesheet" href="src/css/stylesheet.css">
+
+  <script src="src/js/logic.js"></script>
+</head>
+
+<body>
+  
+<header>
+  <p>Quiz historyczny</p>
+</header>
+
+<main>
+  <h1>Zgadnij kim jest ta postać</h1>
+
+  <div class="quiz-container">
+
+    <div class="navigation">
+      <div class="prev">Do przodu</div>
+      <div class="next">Wstecz</div>
+    </div>
+    <section class="question position-relative is-active js-question">
+      <p class="question-number">Pytanie 1 z 6</p>
+      <img src="assets/288px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg" alt="person">
+      <p class="hint">Wskazówka: </p>
+      <ul class="variants">
+        <li><span class="answer js-correct">Napoleon I</span></li>
+        <li><span class="answer">Aleksander I Romanow</span></li>
+        <li><span class="answer">George Washington</span></li>
+      </ul>
+      <div class="description not-active js-description"></div>
+    </section>
+
+    <section class="question js-question">
+      <img src="" alt="person">
+      <p class="hint">this person is known for</p>
+      <ul class="variants">
+        <li><span class="answer js-correct">one</span></li>
+        <li><span class="answer">two</span></li>
+        <li><span class="answer">three</span></li>
+      </ul>
+      <div class="description not-active js-description"></div>
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>Photos from Wikimedia Commons</p>
+</footer>
+
+</body>
+</html>
