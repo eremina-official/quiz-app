@@ -1,14 +1,21 @@
+.question-container {
+  position: relative; 
+}
+
 .question {
   position: absolute;
-  display: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .question.position-relative {
   position: relative;
 }
 
-.question.is-active {
-  display: block;
+.question.question-is-active {
+  opacity: 1;
 }
 
 .question .question-number {
