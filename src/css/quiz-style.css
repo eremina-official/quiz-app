@@ -1,22 +1,32 @@
 .question-container {
   position: relative; 
+  
 }
 
 .question {
   position: absolute;
-  opacity: 0;
+  visibility: hidden;
   top: 0;
   left: 0;
   right: 0;
+  
 }
 
 .question.position-relative {
   position: relative;
 }
 
+/* Question sections are positioned absolute except for the first one which is positioned relative, 
+which makes footer stay on the bottom. Sections visibility is set to hidden, 
+for the currently active section visibility is set to visible. 
+On the elements with visibility:hidden events are not fired.
+Other solution: set opacity of sections to 0 and opacity of currently active section to one. 
+With this approach it is required to set z-index of the current section to a higher value than for other sections,
+the current section needs to stay on very top because on elements with opacity 0 events are fired.
+Other solution would be to set display:none for not acitve sections. */
 .question.question-is-active {
-  opacity: 1;
-}
+  visibility: visible;
+  }
 
 .question .question-number {
   margin: 0;
@@ -33,35 +43,54 @@
 
 .question .hint {
   font-style: italic;
+  margin-bottom: 0;
 }
 
 .question ul {
   list-style-type: none;
+/*   margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0; */
   padding-inline-start: 0;
   padding: 0;
 }
 
 .question li {
-  padding: 0 0.6em 0.6em 0;
+
 }
 
 .question span.answer {
+  display: inline-block;
+  padding: 6px 12px;
   cursor: pointer;
-  padding: 0.4em 0.6em 0.4em 0.6em;
 }
 
-.question .answer:hover {
+.question span.answer:hover {
   background-color: gray;
 }
 
-.question .answer.right {
+.question span.answer.right {
   background-color: yellow;
 }
 
-.question .answer.wrong {
+.question span.answer.wrong {
   background-color: red;
 }
 
 .question .description.not-active {
   display: none;
+}
+
+.question .result-button {
+  width: 9em;
+  margin: auto;
+  padding: 12px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.question .result {
+  text-align: center;
 }
