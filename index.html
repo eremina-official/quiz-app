@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="src/css/stylesheet.css">
   <link rel="stylesheet" href="src/css/quiz-style.css">
 
-  <script src="src/js/logic.js"></script>
+  <script src="src/js/logic.js" defer></script>
 </head>
 
 <body>
@@ -89,7 +89,7 @@
         <div class="description not-active js-description"></div>
       </section>
     
-      <section class="question question-six js-question">
+      <section class="question js-question">
         <p class="question-number">Pytanie 6 z 6</p>
         <img src="assets/350px-Marshal_Tito,_the_President_of_the_Federal_People’s_Republic_of_Yugoslavia.jpg" alt="person">
         <p class="hint">Wskazówka: </p>
@@ -99,7 +99,12 @@
           <li><span class="answer">Erich Honecker</span></li>
         </ul>
         <div class="description not-active js-description"></div>
-      </section>  
+      </section> 
+      
+      <section class="question question-result">
+        <div class="result-button js-result-button">View result</div>
+        <p class="result js-result"></p>
+      </section>
     </div>      
   
   </div>
