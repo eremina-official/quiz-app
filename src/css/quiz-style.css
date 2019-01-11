@@ -1,32 +1,22 @@
 .question-container {
-  position: relative; 
-  
+  min-height: 400px;
 }
 
 .question {
-  position: absolute;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
-  
+  display: none;
 }
 
-.question.position-relative {
-  position: relative;
-}
-
-/* Question sections are positioned absolute except for the first one which is positioned relative, 
-which makes footer stay on the bottom. Sections visibility is set to hidden, 
-for the currently active section visibility is set to visible. 
+/* For not active sections display is set to none.
+Another solution would be to position question sections absolute except for the first one which is positioned relative (which makes the width of relatively positioned container be equal to height of first section). 
+Sections visibility is set to hidden, for the currently active section visibility is set to visible. 
 On the elements with visibility:hidden events are not fired.
-Other solution: set opacity of sections to 0 and opacity of currently active section to one. 
+Another solution: set opacity of sections to 0 and opacity of currently active section to one. 
 With this approach it is required to set z-index of the current section to a higher value than for other sections,
-the current section needs to stay on very top because on elements with opacity 0 events are fired.
-Other solution would be to set display:none for not acitve sections. */
+the current section needs to stay on very top because on elements with opacity 0 events are fired. */
+
 .question.question-is-active {
-  visibility: visible;
-  }
+  display: block;
+}
 
 .question .question-number {
   margin: 0;
@@ -37,7 +27,7 @@ Other solution would be to set display:none for not acitve sections. */
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 430px;
+  max-height: 320px;
   margin: auto;
 }
 
@@ -48,15 +38,8 @@ Other solution would be to set display:none for not acitve sections. */
 
 .question ul {
   list-style-type: none;
-/*   margin-block-start: 0;
-  margin-block-end: 0;
-  margin: 0; */
   padding-inline-start: 0;
   padding: 0;
-}
-
-.question li {
-
 }
 
 .question span.answer {
@@ -77,6 +60,12 @@ Other solution would be to set display:none for not acitve sections. */
   background-color: red;
 }
 
+.question .description {
+  margin: 12px;
+  padding: 12px;
+  border: 1px solid gray;
+}
+
 .question .description.not-active {
   display: none;
 }
@@ -93,4 +82,10 @@ Other solution would be to set display:none for not acitve sections. */
 
 .question .result {
   text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+  .question img {
+    max-height: 430px;
+  }
 }
