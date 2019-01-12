@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* box-sizing property is not inherited */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; 
+}
+
+header {
+  background-color: rgba( 0, 0, 0, .3 );
+  max-width: 1024px;
+  margin: auto;
+}
+
+header p {
+  margin: 0 0 0 3%;
+  padding: 0.4em 0;
+  font-family: 'Charm', cursive;
+  color: white;
+  text-shadow: 4px 4px 4px gray;
+
+}
+
+.main {
+  max-width: 1024px;
+  margin: auto;
+  border: 1px solid #f7f7f7;
+}
+
+.main h1 {
+  font-size: 90%;
+  text-align: center;
+}
+
+.quiz-container {
+  margin: 0 3%;
+}
+
+.quiz-container .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.quiz-container .navigation .prev, .quiz-container .navigation .next {
+  padding: 6px 12px;
+  border: 1px solid gray;
+  width: 130px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quiz-container .navigation .next {
+  margin-left: auto;
+}
+
+.quiz-container .navigation .prev:hover, .quiz-container .navigation .next:hover {
+  background-color: gray;
+  color: white;
+}
+
+footer {
+  background-color: rgba( 0, 0, 0, .3 );
+  max-width: 1024px;
+  margin: auto;
+}
+
+footer p {
+  margin: 0;
+  padding: 1em;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 700px) {
+  .main h1 {
+    font-size: 120%;
+  }
+
+  header p {
+    font-size: 120%;
+    padding: 0.7em 0;
+  }
+}
+
+.question-container {
+  min-height: 400px;
+}
+
+.question {
+  display: none;
+}
+
+/* For not active sections display is set to none.
+Another solution would be to position question sections absolute except for the first one 
+which is positioned relative (which makes the width of relatively positioned container be equal 
+to height of first section). 
+Sections visibility is set to hidden, for the currently active section visibility is set to visible. 
+On the elements with visibility:hidden events are not fired.
+Another solution: set opacity of sections to 0 and opacity of currently active section to one. 
+With this approach it is required to set z-index of the current section to a higher value than for other sections,
+the current section needs to stay on very top because on elements with opacity 0 events are fired. */
+
+.question.question-is-active {
+  display: block;
+}
+
+.question .question-number {
+  margin: 0.1em;
+}
+
+.question img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 320px;
+  margin: auto;
+}
+
+.question .hint {
+  font-style: italic;
+  margin: 0.1em;
+}
+
+.question ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding: 0;
+}
+
+.question span.answer {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.question span.answer:hover {
+  background-color: gray;
+}
+
+.question span.answer.right {
+  background-color: yellow;
+}
+
+.question span.answer.wrong {
+  background-color: red;
+}
+
+.question .description {
+  margin: 12px;
+  padding: 12px;
+  border: 1px solid gray;
+}
+
+.question .description.not-active {
+  display: none;
+}
+
+.question .result-button {
+  width: 9em;
+  margin: auto;
+  padding: 12px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.question .result {
+  text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+  .question img {
+    max-height: 430px;
+  }
+}
