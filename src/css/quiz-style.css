@@ -7,7 +7,9 @@
 }
 
 /* For not active sections display is set to none.
-Another solution would be to position question sections absolute except for the first one which is positioned relative (which makes the width of relatively positioned container be equal to height of first section). 
+Another solution would be to position question sections absolute except for the first one 
+which is positioned relative (which makes the width of relatively positioned container be equal 
+to height of first section). 
 Sections visibility is set to hidden, for the currently active section visibility is set to visible. 
 On the elements with visibility:hidden events are not fired.
 Another solution: set opacity of sections to 0 and opacity of currently active section to one. 
@@ -19,7 +21,7 @@ the current section needs to stay on very top because on elements with opacity 0
 }
 
 .question .question-number {
-  margin: 0;
+  margin: 0.1em;
 }
 
 .question img {
@@ -33,7 +35,7 @@ the current section needs to stay on very top because on elements with opacity 0
 
 .question .hint {
   font-style: italic;
-  margin-bottom: 0;
+  margin: 0.1em;
 }
 
 .question ul {
