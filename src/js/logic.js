@@ -3,7 +3,7 @@
   //cache DOM, declare variables
   const resultButton = document.querySelector('.js-result-button');
   const result = document.querySelector('.js-result');
-  const questionNumber = 6;
+  const questionNumber = 8;
   let counterRight = 0;
   let counterWrong = 0;
 
