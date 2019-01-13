@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f7f7f7;
+  min-height: 100vh;
 }
 
 /* box-sizing property is not inherited */
@@ -27,7 +28,6 @@ header p {
 .main {
   max-width: 1024px;
   margin: auto;
-  border: 1px solid #f7f7f7;
 }
 
 .main h1 {
