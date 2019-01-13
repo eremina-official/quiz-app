@@ -68,6 +68,10 @@ the current section needs to stay on very top because on elements with opacity 0
   border: 1px solid gray;
 }
 
+.question .description__title {
+  font-weight: bold;
+}
+
 .question .description.not-active {
   display: none;
 }
