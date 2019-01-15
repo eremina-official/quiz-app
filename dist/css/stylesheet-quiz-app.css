@@ -86,6 +86,10 @@ footer p {
     font-size: 120%;
     padding: 0.7em 0;
   }
+
+  .quiz-container .navigation.navigation-bottom {
+    display: none;
+  }
 }
 
 .question-container {
