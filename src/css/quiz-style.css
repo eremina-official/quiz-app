@@ -1,5 +1,6 @@
 .question-container {
   min-height: 400px;
+  font-size: 90%;
 }
 
 .question {
@@ -22,6 +23,7 @@ the current section needs to stay on very top because on elements with opacity 0
 
 .question .question-number {
   margin: 0.1em;
+  color: #666666;
 }
 
 .question img {
@@ -35,18 +37,21 @@ the current section needs to stay on very top because on elements with opacity 0
 
 .question .hint {
   font-style: italic;
-  margin: 0.1em;
+  margin: 0;
+  padding: 0.1em;
+  color: #666666;
 }
 
 .question ul {
   list-style-type: none;
+  margin: 0;
   padding-inline-start: 0;
-  padding: 0;
+  padding: 1em 0;
 }
 
 .question span.answer {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 6px;
   cursor: pointer;
 }
 
@@ -63,13 +68,19 @@ the current section needs to stay on very top because on elements with opacity 0
 }
 
 .question .description {
-  margin: 12px;
+  margin: 0;
   padding: 12px;
   border: 1px solid gray;
 }
 
-.question .description__title {
+.question .description p.description__title {
   font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 1em;
+}
+
+.question .description p {
+  margin: 0;
 }
 
 .question .description.not-active {
