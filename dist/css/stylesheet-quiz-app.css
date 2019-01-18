@@ -109,6 +109,10 @@ footer p {
         align-self: center;
   }
 
+  .main {
+    padding-bottom: 2em;
+  }
+
   .main h1 {
     font-size: 115%;
   }
@@ -176,6 +180,7 @@ the current section needs to stay on very top because on elements with opacity 0
 
 .question span.answer {
   display: inline-block;
+  width: 100%;
   padding: 6px;
   cursor: pointer;
 }
@@ -214,7 +219,7 @@ the current section needs to stay on very top because on elements with opacity 0
 
 .question .result-button {
   width: 9em;
-  margin: auto;
+  margin: 2em auto 0;
   padding: 12px;
   background-color: gray;
   color: white;
