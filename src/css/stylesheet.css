@@ -103,6 +103,10 @@ footer p {
     align-self: center;
   }
 
+  .main {
+    padding-bottom: 2em;
+  }
+
   .main h1 {
     font-size: 115%;
   }
