@@ -12,15 +12,17 @@ body {
 }
 
 header {
+  display: flex;
+  align-items: center;
   background-color: rgba( 0, 0, 0, .6 );
   max-width: 1024px;
   margin: auto;
+  padding: 1.5% 3%;
   font-family: 'Charm', cursive;
 }
 
 header .header__title {
-  margin: 0 0 0 3%;
-  padding: 0.4em 0;
+  margin: 0;
   color: white;
   text-shadow: 4px 4px 4px gray;
 }
@@ -85,22 +87,8 @@ footer p {
 }
 
 @media only screen and (min-width: 700px) {
-  header {
-    display: flex;
-  }
-
   header .header__title {
     font-size: 120%;
-    padding: 0.7em 0;
-  }
-
-  header .header__credits {
-    display: block;
-    color: white;
-    margin-left: auto;
-    margin-right: 3%;
-    font-size: 80%;
-    align-self: center;
   }
 
   .main {
@@ -114,7 +102,15 @@ footer p {
   .quiz-container .navigation.navigation-bottom {
     display: none;
   }
+}
 
+@media only screen and (min-width: 400px) and (min-height: 600px) {
+  header .header__credits {
+    display: block;
+    color: white;
+    margin: 0 0 0 auto;
+    font-size: 80%;
+  }
   footer {
     display: none;
   }
