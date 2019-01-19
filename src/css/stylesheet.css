@@ -17,12 +17,13 @@ header {
   background-color: rgba( 0, 0, 0, .6 );
   max-width: 1024px;
   margin: auto;
-  padding: 1.5% 3%;
+  padding: 14px 0;
   font-family: 'Charm', cursive;
 }
 
 header .header__title {
   margin: 0;
+  padding-left: 3%;
   color: white;
   text-shadow: 4px 4px 4px gray;
 }
@@ -109,6 +110,7 @@ footer p {
     display: block;
     color: white;
     margin: 0 0 0 auto;
+    padding-right: 3%;
     font-size: 80%;
   }
   footer {
