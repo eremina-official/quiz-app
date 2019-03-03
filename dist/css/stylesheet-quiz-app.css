@@ -26,7 +26,12 @@ header {
   font-family: 'Charm', cursive;
 }
 
+/* for title and credits flex-grow property is set to 1 to avoid that text would span multiple lines 
+when the window is resized */
 header .header__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   margin: 0;
   padding-left: 3%;
   color: white;
@@ -34,6 +39,10 @@ header .header__title {
 }
 
 header .header__credits {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: right;
   display: none;
 }
 
@@ -116,7 +125,7 @@ footer p {
   header .header__credits {
     display: block;
     color: white;
-    margin: 0 0 0 auto;
+    margin: 0;
     padding-right: 3%;
     font-size: 80%;
   }
