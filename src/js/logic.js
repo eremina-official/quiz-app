@@ -31,25 +31,26 @@
   }
 
   function processAnswer(event) {
-    let selectedAnswer = event.target;
-    let currentQuestion = document.querySelector('.question-is-active');
+    const selectedAnswer = event.target;
+    const currentQuestion = document.querySelector('.question-is-active');
     
-    if (selectedAnswer.tagName == 'SPAN' && !currentQuestion.classList.contains('done')) { 
-        
-      if (selectedAnswer.classList.contains('js-correct')) {
-        selectedAnswer.classList.add('right');
-        counterRight = counterRight + 1;
-      } else {
-        let correctAnswer = currentQuestion.querySelector('span.js-correct');
-        correctAnswer.classList.add('right');
-        selectedAnswer.classList.add('wrong');
-        counterWrong = counterWrong + 1;
-      }
-
-      currentQuestion.classList.add('done');
-      let description = currentQuestion.querySelector('.js-description');
-      description.classList.remove('not-active');
+    if (!selectedAnswer.classList.contains('answer') || currentQuestion.classList.contains('done')) {
+      return;
     }
+        
+    if (selectedAnswer.classList.contains('js-correct')) {
+      selectedAnswer.classList.add('right');
+      counterRight = counterRight + 1;
+    } else {
+      const correctAnswer = currentQuestion.querySelector('.js-correct');
+      correctAnswer.classList.add('right');
+      selectedAnswer.classList.add('wrong');
+      counterWrong = counterWrong + 1;
+    }
+
+    const description = currentQuestion.querySelector('.js-description');
+    description.classList.remove('not-active');
+    currentQuestion.classList.add('done');
   }
 
   //show result or info that not all questions have been answered
