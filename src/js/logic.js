@@ -55,7 +55,7 @@
 
   //show result or info that not all questions have been answered
   function showResult() {
-    let totalCount = counterRight + counterWrong;
+    const totalCount = counterRight + counterWrong;
 
     result.textContent = (totalCount === questionNumber) 
     ? `Wynik: ${counterRight} z ${questionNumber}.`
@@ -64,7 +64,7 @@
   
   //remove message after all questions have been answered
   function clearMessage(event) {
-    let totalCount = counterRight + counterWrong;    
+    const totalCount = counterRight + counterWrong;    
     
     if (event.target.tagName == 'SPAN' && totalCount === questionNumber && result.textContent === 'Proszę odpowiedzieć na wszystkie pytania.') {
       result.textContent = '';
