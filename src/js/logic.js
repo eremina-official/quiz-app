@@ -15,32 +15,22 @@
 
   //function declarations
   function movePrevNextQuestion(event) {
-    
     let currentQuestion = document.querySelector('.question-is-active');
 
-    if (event.target.classList.contains('prev')) {
-      if (currentQuestion.classList.contains('question-one')) {
-        return;
-      } else {
-        let prevQuestion = currentQuestion.previousElementSibling;
-        currentQuestion.classList.remove('question-is-active');
-        prevQuestion.classList.add('question-is-active');
-      }
+    if (event.target.classList.contains('prev') && !currentQuestion.classList.contains('question-one')) {
+      let prevQuestion = currentQuestion.previousElementSibling;
+      currentQuestion.classList.remove('question-is-active');
+      prevQuestion.classList.add('question-is-active');
     }
     
-    if (event.target.classList.contains('next')) {
-      if (currentQuestion.classList.contains('question-result')) {
-        return;
-      } else {
-        let nextQuestion = currentQuestion.nextElementSibling;
-        currentQuestion.classList.remove('question-is-active');
-        nextQuestion.classList.add('question-is-active');
-      }
+    if (event.target.classList.contains('next') && !currentQuestion.classList.contains('question-result')) {
+      let nextQuestion = currentQuestion.nextElementSibling;
+      currentQuestion.classList.remove('question-is-active');
+      nextQuestion.classList.add('question-is-active');
     }
   }
 
   function processAnswer(event) {
-
     let selectedAnswer = event.target;
     let currentQuestion = document.querySelector('.question-is-active');
     
@@ -64,18 +54,15 @@
 
   //show result or info that not all questions have been answered
   function showResult() {
-    
     let totalCount = counterRight + counterWrong;
 
     result.textContent = (totalCount === questionNumber) 
     ? `Wynik: ${counterRight} z ${questionNumber}.`
     : `Proszę odpowiedzieć na wszystkie pytania.`;
-    
   }
   
   //remove message after all questions have been answered
   function clearMessage(event) {
-
     let totalCount = counterRight + counterWrong;    
     
     if (event.target.tagName == 'SPAN' && totalCount === questionNumber && result.textContent === 'Proszę odpowiedzieć na wszystkie pytania.') {
