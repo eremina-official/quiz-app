@@ -15,16 +15,16 @@
 
   //function declarations
   function movePrevNextQuestion(event) {
-    let currentQuestion = document.querySelector('.question-is-active');
+    const currentQuestion = document.querySelector('.question-is-active');
 
     if (event.target.classList.contains('prev') && !currentQuestion.classList.contains('question-one')) {
-      let prevQuestion = currentQuestion.previousElementSibling;
+      const prevQuestion = currentQuestion.previousElementSibling;
       currentQuestion.classList.remove('question-is-active');
       prevQuestion.classList.add('question-is-active');
     }
     
     if (event.target.classList.contains('next') && !currentQuestion.classList.contains('question-result')) {
-      let nextQuestion = currentQuestion.nextElementSibling;
+      const nextQuestion = currentQuestion.nextElementSibling;
       currentQuestion.classList.remove('question-is-active');
       nextQuestion.classList.add('question-is-active');
     }
