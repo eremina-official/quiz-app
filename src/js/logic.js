@@ -10,6 +10,7 @@
   let counterWrong = 0;
 
   //bind events
+  /* event delegation is used to capture the same event type for multiple targets */
   document.addEventListener('click', movePrevNextQuestion);
   document.addEventListener('click', processAnswer);
   resultButton.addEventListener('click', showResult);
