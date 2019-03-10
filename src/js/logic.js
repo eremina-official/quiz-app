@@ -1,4 +1,6 @@
 (function() {
+  
+  'use strict';
 
   //cache DOM, declare variables
   const resultButton = document.querySelector('.js-result-button');
